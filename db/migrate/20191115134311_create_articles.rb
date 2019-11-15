@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :summary
       t.date :date
-      t.boolean :status
+      t.boolean :status, default: false
       t.string :link
       t.references :feed, null: false, foreign_key: true
 
