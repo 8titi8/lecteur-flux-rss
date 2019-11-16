@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+case Rails.env
+when 'development'
+  Feed.create!(title: "Le Monde - Actu", url: "https://www.lemonde.fr/rss/une.xml")
+  Feed.create!(title: "France Info - France", url: "https://www.francetvinfo.fr/france.rss")
+end

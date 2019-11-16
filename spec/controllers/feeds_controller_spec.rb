@@ -23,11 +23,4 @@ RSpec.describe FeedsController, type: :controller do
       end
     end
   end
-  # context "public instance methods" do
-  #   describe  "#create" do
-  #     it "should register the feed in DB" do
-  #       expect(Feed.count).to eq(1)
-  #     end
-  #   end
-  # end
 end

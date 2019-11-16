@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_15_134311) do
     t.string "title"
     t.text "summary"
     t.date "date"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.string "link"
     t.bigint "feed_id", null: false
     t.datetime "created_at", precision: 6, null: false
