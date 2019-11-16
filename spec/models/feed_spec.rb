@@ -30,7 +30,4 @@ RSpec.describe Feed, type: :model do
     end
   end
 
-  context "public instance methods" do
-  end
-
 end
