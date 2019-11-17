@@ -15,7 +15,7 @@ namespace :new_feed do
     # Get all info to add in DB
     doc.css('item').each do |article|
       title = article.css('title').text
-      date = article.css('pubDate').text.to_date
+      date = article.css('pubDate').text.to_date.strftime("%d/%m/%Y")
       summary = article.css('description').text
       link = article.css('link').text
       Article.create!(title: title, summary: summary, date: date, status: false, link: link, feed_id: feed.id)

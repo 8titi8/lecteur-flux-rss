@@ -24,7 +24,7 @@ namespace :feed_update do
           j += 1
         else
           title = article.css('title').text
-          date = article.css('pubDate').text.to_date.strftime("%d/%m/%y")
+          date = article.css('pubDate').text.to_date.strftime("%d/%m/%Y")
           summary = article.css('description').text
           link = article.css('link').text
           Article.create!(title: title, summary: summary, date: date, status: false, link: link, feed_id: feed.id)

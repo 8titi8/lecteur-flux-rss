@@ -1,6 +1,8 @@
 class FeedsController < ApplicationController
   def index
     @feeds = Feed.all
+    @all_feeds = @feeds.as_json(only: [:id, :title])
+    @all_articles = Article.all.as_json(only: [:id, :title, :summary, :date, :status, :link])
   end
 
   def create
@@ -12,6 +14,7 @@ class FeedsController < ApplicationController
       flash[:error] = "Un problème est survenu"
     end
   end
+
 
   private
 

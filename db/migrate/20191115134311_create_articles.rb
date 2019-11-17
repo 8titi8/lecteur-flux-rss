@@ -3,7 +3,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
     create_table :articles do |t|
       t.string :title
       t.text :summary
-      t.date :date
+      t.date :string
       t.boolean :status, default: false
       t.string :link
       t.references :feed, null: false, foreign_key: true
