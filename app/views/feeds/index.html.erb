@@ -1,5 +1,6 @@
 <h1>TEST</h1>
-<%= react_component("Feeds", feeds: @all_feeds) %>
-<%= react_component("Articles", articles: @all_articles) %>
+<%= react_component("add_feed_button") %>
+<%= react_component("Feeds", {feeds: @all_feeds, articles: @all_articles}) %>
+<%#= react_component("Articles", articles: @all_articles) %>
 <%#= react_component("Feed", feeds: @all_feeds) %>
 <% console %>
