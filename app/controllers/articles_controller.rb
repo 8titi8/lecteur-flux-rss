@@ -1,10 +1,13 @@
 class ArticlesController < ApplicationController
+
   def update
     @article = Article.find(params[:id])
+    # Transform string status from params to boolean
     status = ActiveModel::Type::Boolean.new.cast(article_params[:status])
+
     respond_to do |format|
       if @article.update(status: status)
-        p @article.update(status: status)
+        @article.update(status: status)
         format.html {redirect_to root_path}
         format.js
       else
@@ -13,6 +16,7 @@ class ArticlesController < ApplicationController
         format.html {render :index}
       end
     end
+
   end
 
   private

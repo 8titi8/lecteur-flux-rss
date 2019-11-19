@@ -15,6 +15,7 @@ class FeedForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // Verify if input not empty and url is an proper url
   canBeSubmitted() {
     const { title, url } = this.state;
     return (
@@ -32,6 +33,8 @@ class FeedForm extends React.Component {
     this.setState({ url: e.target.value });
   }
 
+  // add the class error if url not valid
+  // else change state of add button
   handleSubmit(e) {
     if (!this.canBeSubmitted()) {
       e.preventDefault();
@@ -41,7 +44,6 @@ class FeedForm extends React.Component {
   }
 
   render() {
-    const isEnabled = this.canBeSubmitted();
     if (this.state.add == true) {
       const { title, url } = this.state;
       const isEnabled = title.length > 0 && url.length > 0;

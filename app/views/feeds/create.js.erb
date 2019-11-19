@@ -1,3 +1,5 @@
-
+<!-- add the new feed -->
 $("<%= escape_javascript(render partial: 'feeds/components/feed', locals: {feed: @feed}) %>").prependTo("#feeds");
+
+<!-- add articles into new feed -->
 $("<%= escape_javascript(render partial: 'feeds/components/article', collection: @articles, locals: {feed: @feed}) %>").appendTo("#feed-<%= escape_javascript @feed.id%> .articles");
