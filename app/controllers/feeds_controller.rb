@@ -1,6 +1,6 @@
 class FeedsController < ApplicationController
   def index
-    @feeds = Feed.all.order(id: :desc)
+    @feeds = Feed.all.order(id: :desc).paginate(:page => params[:page], :per_page => 5)
     @feed = Feed.new
     @all_feeds = Feed.all_feeds_json
     @all_articles = Article.all_articles_json

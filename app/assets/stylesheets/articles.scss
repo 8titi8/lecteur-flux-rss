@@ -1,3 +1,16 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-bloc {
+  width: 90%;
+  margin: 0.5rem auto;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+.article-title {
+  font-size: 1rem;
+}
+
+.summary, a {
+  font-size: 0.8rem;
+}

@@ -2,14 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <%= form_with model: @feed do |form| %>
-          <%= form.label :title %>
-          <%= form.text_field :title %>
-          <%= form.label :url %>
-          <%= form.text_field :url  %>
-          <%= form.submit %>
-          <%= react_component("FeedForm", feed: @feed) %>
-        <% end %>
+        <%= react_component("FeedForm", {feed: @feed, authenticityToken: form_authenticity_token }) %>
       </div>
     </div>
   </div>
@@ -17,6 +10,7 @@
   <div class="container-fluid">
     <div id="feeds" class="row">
       <%= render partial: 'feeds/components/feed', collection: @feeds  %>
+      <%= will_paginate @feeds %>
     </div>
   </div>
 
@@ -24,5 +18,5 @@
   <%#= react_component("Feeds", {feeds: @all_feeds, articles: @all_articles}) %>
   <%#= react_component("Articles", articles: @all_articles) %>
   <%#= react_component("Feed", feeds: @all_feeds) %>
-  <%# console %>
+  <% console %>
 </div>
