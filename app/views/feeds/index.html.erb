@@ -1,6 +1,28 @@
-<h1>TEST</h1>
-<%= react_component("add_feed_button") %>
-<%= react_component("Feeds", {feeds: @all_feeds, articles: @all_articles}) %>
-<%#= react_component("Articles", articles: @all_articles) %>
-<%#= react_component("Feed", feeds: @all_feeds) %>
-<% console %>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <%= form_with model: @feed do |form| %>
+          <%= form.label :title %>
+          <%= form.text_field :title %>
+          <%= form.label :url %>
+          <%= form.text_field :url  %>
+          <%= form.submit %>
+          <%= react_component("FeedForm", feed: @feed) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div id="feeds" class="row">
+      <%= render partial: 'feeds/components/feed', collection: @feeds  %>
+    </div>
+  </div>
+
+  <%#= react_component("add_feed_button") %>
+  <%#= react_component("Feeds", {feeds: @all_feeds, articles: @all_articles}) %>
+  <%#= react_component("Articles", articles: @all_articles) %>
+  <%#= react_component("Feed", feeds: @all_feeds) %>
+  <%# console %>
+</div>

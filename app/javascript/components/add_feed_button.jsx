@@ -21,6 +21,6 @@ class AddFeedButton extends React.Component {
 }
 
 AddFeedButton.propTypes = {
-  articles: PropTypes.array
+  add_feed_button: PropTypes.array
 };
 export default AddFeedButton

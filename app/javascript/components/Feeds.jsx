@@ -7,8 +7,6 @@ class Feeds extends React.Component {
   state = { data : [1, "TEST"] }
   render () {
     console.log(this.props.articles);
-    const hash = (this.props.articles);
-    console.log(result);
     return (
       <React.Fragment>
       <h2>Composant react Feeds</h2>

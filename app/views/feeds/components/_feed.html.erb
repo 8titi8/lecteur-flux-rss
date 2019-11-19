@@ -1,0 +1,10 @@
+<div class="col-5  mr-4 ml-4 border shadow">
+  <div id="feed-<%= feed.id %>" class="feed-bloc">
+    <div class="row border-bottom">
+      <h2 class="feed-title pl-2 pr-2"><%= feed.title %></h2>
+    </div>
+    <div class="row pt-4">
+      <%= render partial: 'feeds/components/article', collection: @all_articles, locals: {feed: feed} %>
+    </div>
+  </div>
+</div>

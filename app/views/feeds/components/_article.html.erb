@@ -1,0 +1,26 @@
+<% if article["feed_id"] == feed.id %>
+  <div class="article-bloc row border">
+    <div class="col-12">
+      <div class="row pt-2 pb-2">
+        <div class="col-9">
+          <h4 class="article-title"><%= article["title"] %></h4>
+        </div>
+        <div class="col-3 d-flex align-self-center justify-content-end">
+          <p><%= article["date"].to_date.strftime("%d/%m/%Y") %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-1 col-10">
+          <p class="text-justify">
+            <span class="summary"><%= article["summary"] %></span>
+            <% if article["status"] == false %>
+              <%= link_to("Marquer comme lu", article_path(id: article["id"], status: true), method: :put, data: {remote: true}, class: "unread ml-4 d-flex justify-content-end") %>
+              <% else %>
+                <%= link_to("Marquer comme non lu", article_path(id: article["id"], status: false), method: :put, data: {remote: true}, class: "unread ml-4 d-flex justify-content-end") %>
+              <% end %>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
