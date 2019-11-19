@@ -17,4 +17,11 @@ body {
 .form {
   background-color: #E3E3E3;
   padding: 1rem 2rem 0.5rem 1rem;
+  margin: 1rem 0;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .feed-form-col .form{
+    width: 100%;
+  }
 }

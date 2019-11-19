@@ -50,7 +50,7 @@ class FeedForm extends React.Component {
         <form className="form" action="/feeds" acceptCharset="UTF-8" data-remote="true" method="post" onSubmit={this.handleSubmit} >
             <input type="hidden" name="authenticity_token" value={this.props.authenticityToken} />
           <div className="row w-100">
-            <div className="col-10">
+            <div className="col-12 col-md-10">
               <div className="row form-group">
                 <input type="text" name="feed[title]" id="feed_title" placeholder="Titre du flux" className="form-control" value={this.state.title} onChange={this.handleTitleChange} />
               </div>
@@ -58,7 +58,7 @@ class FeedForm extends React.Component {
                 <input type="text" name="feed[url]" id="feed_url" placeholder="Url du flux" value={this.state.url} className={this.state.urlError + ' form-control'} onChange={this.handleUrlChange} />
               </div>
             </div>
-            <div className="col-2 d-flex align-items-end">
+            <div className="col-12 col-md-2 d-flex align-items-end">
               <input type="submit" name="commit" value="Ajouter le flux" className="btn btn-primary mb-3" data-disable-with="Ajouter le flux" disabled={!isEnabled} />
             </div>
           </div>
