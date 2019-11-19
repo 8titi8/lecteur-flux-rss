@@ -49,24 +49,25 @@ Pour ce projet :
 ```
 
 ## 💎 Les gems :
-
-* gem 'rails', '~> 6.0.0'
-* gem 'mysql2', '>= 0.4.4' → utilisation de MySql
-* gem 'puma', '~> 3.11'
-* gem 'sass-rails', '~> 5'
-* gem 'webpacker', '~> 4.0'
-* gem "react-rails", "~> 2.6" → utilisation de react
-* gem 'turbolinks', '~> 5'
-* gem 'jbuilder', '~> 2.7'
-* gem 'whenever', '~> 1.0' → permet d'ajouter un scheduler pour les tâches
-* gem 'rspec-rails', '~> 4.0.0.beta2' → pour effectuer les tests
-* gem 'guard-rspec', '~> 4.7', '>= 4.7.3', require: false → pour lancer les tests automatiquement
-* gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1' → pour créer des instances en test
-* gem 'database_cleaner', '~> 1.7' → pour nettoyer la DB après chaque test
-* gem 'faker', '~> 2.7' → pour créer de faux noms / texts / url
-* gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2' → helper pour faciliter l'écriture du code
-* gem 'rails-controller-testing'
-* gem 'capybara', '~> 2.7', '>= 2.7.1'
+```
+gem 'rails', '~> 6.0.0'
+gem 'mysql2', '>= 0.4.4' → utilisation de MySql
+gem 'puma', '~> 3.11'
+gem 'sass-rails', '~> 5'
+gem 'webpacker', '~> 4.0'
+gem "react-rails", "~> 2.6" → utilisation de react
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.7'
+gem 'whenever', '~> 1.0' → permet d'ajouter un scheduler pour les tâches
+gem 'rspec-rails', '~> 4.0.0.beta2' → pour effectuer les tests
+gem 'guard-rspec', '~> 4.7', '>= 4.7.3', require: false → pour lancer les tests automatiquement
+gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1' → pour créer des instances en test
+gem 'database_cleaner', '~> 1.7' → pour nettoyer la DB après chaque test
+gem 'faker', '~> 2.7' → pour créer de faux noms / texts / url
+gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2' → helper pour faciliter l'écriture du code
+gem 'rails-controller-testing'
+gem 'capybara', '~> 2.7', '>= 2.7.1'
+```
 
 ## 🎯 Les problématiques rencontrées :
 
