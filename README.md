@@ -76,20 +76,20 @@ Plutôt que de créer l'application avec ce que je savais faire en Rails pour en
 
 Voici la liste non exhaustive des problématiques rencontrées :
 
-* Rails 6.0
+### Rails 6.0
 Pas de réelle difficulté ici, seulement le changement de l'asset pipelines à l'utilisation de webpack, une première pour moi.
 
-* Découverte MySQL
+### Découverte MySQL
 J'ai d'abord eu quelques difficultés avec la gestion d'une DB MySql puisque je n'avais toujours qu'utilisé SQLite ou PostGreSql. Cela m'a donné du fil à retordre pour configurer les accès.. ! J'ai du créer un nouvel utilisateur et lui donner les droits d'accès pour les bases de données utilisées pour l'app (développement et test).
 
-* Les tests en TDD
+### Les tests en TDD
 Bien que novice en TDD, j'ai commencé par les tests pour construire l'app. N'en ayant que peu ou pas du tout fait lors de ma formation, j'ai repris les ressources données pour être capable d'en faire un minimum. Si cela m'a permis d'apprendre, cela m'a aussi pris un temps précieux !
 
-* React plutôt qu'Ajax
+### React plutôt qu'Ajax
 J'en avais souvent entendu parler, mais je ne m'y étais jamais confrontée. Comme pour le front il était demandé d'utiliser React JS, plutôt que de faire l'app en Ajax d'abord puis d'essayer de la transposer, j'ai voulu de suite faire du React. Or sans prendre le temps de suivre un vrai cours dessus, c'était présomptueux de ma part.
 
-* Ajax ce sera
+### Ajax ce sera
 Après m'être un peu cassée les dents avec React - car l'on trouve de tout sur le net à son propos - j'ai donc décidé de revenir sur quelque chose que je pouvais mieux maîtriser: l'Ajax. Notion, apprise à la toute fin de ma formation, je n'avais jamais réellement essayé de les mettre en application.
 
-* Victoire, le formulaire est en React JS
+### Victoire, le formulaire est en React JS
 Pour finir, j'ai tout de même réussi à créer un composant React: le formulaire qui permet d'ajouter un nouveau flux.
