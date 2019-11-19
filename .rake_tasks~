@@ -34,7 +34,6 @@ db:version
 feed_update:get_new_articles
 log:clear
 middleware
-new_feed:all_articles
 restart
 secret
 spec
