@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :feed do
-    title { "Titre du flux" }
-    url { "https://urlflux.com" }
+    title { Faker::Book.title }
+    url { Faker::Internet.url  }
   end
 end
