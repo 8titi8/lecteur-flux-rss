@@ -1,16 +1,15 @@
 <div class="wrapper">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="feed-form-row row">
+      <div class="feed-form-col col-10 d-flex align-items-center justify-content-end">
         <%= react_component("FeedForm", {feed: @feed, authenticityToken: form_authenticity_token }) %>
       </div>
     </div>
   </div>
 
   <div class="container-fluid">
-    <div id="feeds" class="row">
+    <div id="feeds" class="row d-flex justify-content-around">
       <%= render partial: 'feeds/components/feed', collection: @feeds  %>
-      <%= will_paginate @feeds %>
     </div>
   </div>
 
@@ -18,5 +17,4 @@
   <%#= react_component("Feeds", {feeds: @all_feeds, articles: @all_articles}) %>
   <%#= react_component("Articles", articles: @all_articles) %>
   <%#= react_component("Feed", feeds: @all_feeds) %>
-  <% console %>
 </div>

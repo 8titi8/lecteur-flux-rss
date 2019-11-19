@@ -1,9 +1,9 @@
-<div class="col-5  mr-4 ml-4 border shadow">
+<div class="col-10 offset-1 col-md-5 offset-md-1  ml-auto mr-auto border rounded shadow">
   <div id="feed-<%= feed.id %>" class="feed-bloc">
     <div class="row border-bottom">
-      <h2 class="feed-title pl-2 pr-2"><%= feed.title %></h2>
+      <h2 class="feed-title pl-4 pr-4 pt-2 pb-1">Les news de <%= feed.title %></h2>
     </div>
-    <div class="row pt-4">
+    <div class="row pt-4 pb-4">
       <%= render partial: 'feeds/components/article', collection: @all_articles, locals: {feed: feed} %>
     </div>
   </div>

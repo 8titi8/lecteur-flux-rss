@@ -47,19 +47,27 @@ class FeedForm extends React.Component {
       const isEnabled = title.length > 0 && url.length > 0;
       return (
         <React.Fragment>
-        <form action="/feeds" acceptCharset="UTF-8" data-remote="true" method="post" onSubmit={this.handleSubmit} >
-          <input type="hidden" name="authenticity_token" value={this.props.authenticityToken} />
-          <label htmlFor="feed_title">Title</label>
-          <input type="text" name="feed[title]" id="feed_title" value={this.state.title} onChange={this.handleTitleChange} />
-          <label htmlFor="feed_url">Url</label>
-          <input type="text" name="feed[url]" id="feed_url" value={this.state.url} className={this.state.urlError} onChange={this.handleUrlChange} />
-          <input type="submit" name="commit" value="Ajouter le flux" data-disable-with="Ajouter le flux" disabled={!isEnabled} />
+        <form className="form" action="/feeds" acceptCharset="UTF-8" data-remote="true" method="post" onSubmit={this.handleSubmit} >
+            <input type="hidden" name="authenticity_token" value={this.props.authenticityToken} />
+          <div className="row w-100">
+            <div className="col-10">
+              <div className="row form-group">
+                <input type="text" name="feed[title]" id="feed_title" placeholder="Titre du flux" className="form-control" value={this.state.title} onChange={this.handleTitleChange} />
+              </div>
+              <div className="row form-group">
+                <input type="text" name="feed[url]" id="feed_url" placeholder="Url du flux" value={this.state.url} className={this.state.urlError + ' form-control'} onChange={this.handleUrlChange} />
+              </div>
+            </div>
+            <div className="col-2 d-flex align-items-end">
+              <input type="submit" name="commit" value="Ajouter le flux" className="btn btn-primary mb-3" data-disable-with="Ajouter le flux" disabled={!isEnabled} />
+            </div>
+          </div>
         </form>
         </React.Fragment>
         );
       }
     return (
-      <button onClick={() => this.setState({ add: true })}>
+      <button className="btn btn-primary" onClick={() => this.setState({ add: true })}>
         Ajouter un flux
       </button>
        );

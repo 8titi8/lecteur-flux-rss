@@ -1,12 +1,13 @@
 <% if article["feed_id"] == feed.id %>
-  <div class="article-bloc row border">
+<a class="article-link" href="<%= article['link'] %>" target="_blank" >
+  <div id="<%= article['feed_id'] %>" class="article-bloc <%= article['status'] %> row border rounded">
     <div class="col-12">
-      <div class="row pt-2 pb-2">
-        <div class="col-9">
+      <div class="row pt-3 pb-1 pl-1 pr-1">
+        <div class="col-8 col-sm-10">
           <h4 class="article-title"><%= article["title"] %></h4>
         </div>
-        <div class="col-3 d-flex align-self-center justify-content-end">
-          <p><%= article["date"].to_date.strftime("%d/%m/%Y") %></p>
+        <div class="col-4 col-sm-2 d-flex align-self-center justify-content-end">
+          <p class="date"><%= article["date"].to_date.strftime("%d/%m/%Y") %></p>
         </div>
       </div>
       <div class="row">
@@ -14,13 +15,14 @@
           <p class="text-justify">
             <span class="summary"><%= article["summary"] %></span>
             <% if article["status"] == false %>
-              <%= link_to("Marquer comme lu", article_path(id: article["id"], status: true), method: :put, data: {remote: true}, class: "unread ml-4 d-flex justify-content-end") %>
+              <%= link_to("Marquer comme lu", article_path(id: article["id"], status: true), method: :put, data: {remote: true}, class: "read-link is-false ml-4 d-flex justify-content-end") %>
               <% else %>
-                <%= link_to("Marquer comme non lu", article_path(id: article["id"], status: false), method: :put, data: {remote: true}, class: "unread ml-4 d-flex justify-content-end") %>
+                <%= link_to("Marquer comme non lu", article_path(id: article["id"], status: false), method: :put, data: {remote: true}, class: "read-link is-true ml-4 d-flex justify-content-end") %>
               <% end %>
             </p>
         </div>
       </div>
     </div>
   </div>
+  </a>
 <% end %>

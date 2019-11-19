@@ -2,15 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.article-link {
+  color: #212529
+}
+
+.article-link:hover {
+  text-decoration: none;
+  color: #212529;
+}
+
 .article-bloc {
   width: 90%;
   margin: 0.5rem auto;
-  background-color: rgba(200, 200, 200, 0.5);
 }
+
+.article-bloc:hover {
+  box-shadow: 0px 0px 10px 5px rgba(200, 200, 200, .3);
+}
+
+.false {
+  background-color: #EEEEEE;
+}
+
+.true {
+  background-color: none;
+}
+
 .article-title {
   font-size: 1rem;
 }
 
-.summary, a {
+.summary, a, .date {
   font-size: 0.8rem;
 }
